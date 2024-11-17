@@ -5,6 +5,7 @@ import Nav from "../component/Nav";
 import LeftNav from "../component/Layout-component/LeftNav";
 import MiddleNav from "../component/Layout-component/MiddleNav";
 import RightNav from "../component/Layout-component/RightNav";
+import { Outlet } from "react-router-dom";
 
 export default function HomeLayOut() {
   return (
@@ -20,7 +21,7 @@ export default function HomeLayOut() {
       </nav>
       <main className="w-11/12 mx-auto md:pt-5 md:grid md:grid-cols-12 gap-4">
       <aside className="col-span-3"><LeftNav></LeftNav></aside>
-      <section className="col-span-6"><MiddleNav></MiddleNav></section>
+      <section className="col-span-6"><Outlet></Outlet></section>
       <aside className="col-span-3"><RightNav></RightNav></aside>
       </main>
     </div>
