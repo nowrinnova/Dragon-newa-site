@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import userLogo from '../assets/user.png'
+// import { AuthContext } from '../Provider/AuthProvider'
 export default function Nav() {
+  // const {user}=useContext(AuthContext)
+  // console.log(user?.email)
   return (
-    <div className='flex justify-between items-center sticky top-0 z-50'>
+    <div className='flex justify-between items-center '>
       <div></div>
       <div className='md:pl-32'>
         <ul className='flex gap-2 text-gray-500' >

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function NewsCart({ news }) {
-  console.log(news.author.name);
+  // console.log(news._id);
   const [showFullDetails, setShowFullDetails] = useState(false);
 
   // Function to toggle between full and truncated text
@@ -44,15 +45,9 @@ export default function NewsCart({ news }) {
         </figure>
         <div className="card-body">
           <h2 className="card-title">{news.title}</h2>
-          <p className="text-xs text-gray-600"> {showFullDetails ? news.details : truncatedText}</p>
+          <p className="text-xs text-gray-600"> {truncatedText }</p>
           <div className="card-actions justify-end">
-            {/* <button className="btn btn-primary btn-sm">Read More</button> */}
-            <button
-          className="btn btn-primary btn-sm mt-4"
-          onClick={toggleDetails}
-        >
-          {showFullDetails ? "Show Less" : "Read More"}
-        </button>
+            <Link to={`/news/${news._id}`}>Read More</Link>
           </div>
         </div>
 
