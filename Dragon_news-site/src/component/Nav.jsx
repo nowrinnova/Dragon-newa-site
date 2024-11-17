@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import userLogo from '../assets/user.png'
 export default function Nav() {
   return (
-    <div className='flex justify-between items-center'>
+    <div className='flex justify-between items-center sticky top-0 z-50'>
       <div></div>
       <div className='md:pl-32'>
         <ul className='flex gap-2 text-gray-500' >
@@ -16,7 +16,8 @@ export default function Nav() {
         <div>
           <img src={userLogo} alt="" />
         </div>
-        <button className='btn rounded-lg bg-black text-white'>Login</button>
+        <Link to={'/auth'}
+         className='btn rounded-lg bg-black text-white'>Login</Link>
       </div>
     </div>
   )

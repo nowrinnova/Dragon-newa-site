@@ -14,7 +14,7 @@ export default function LeftNav() {
 // console.log(categories)
 // categories.map(category=>console.log(category.category_name))
   return (
-    <div >
+    <div className='sticky top-0 z-40' >
       <h1 className='font-semibold text-center pb-2'>All Category {categories.length}</h1>
       {categories?.map((category,index)=> <NavLink to={`/category/${category.category_id}`} className='btn w-full my-2 bg-base-100' key={index}> {category.category_name}</NavLink>
       )}
